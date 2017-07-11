@@ -138,6 +138,7 @@
   "indicator-position": {"options": ["outside", "none"], "description": "position of the indicators"},
   "arrow": {"options": ["always", "hover", "nerver"], "description": "when arrows are shown, default: hover"},
   "placement": {"option": ["top", "top-start", "top-end", "bottom", "bottom-start", "bottom-end", "left", "left-start", "left-end", "right", "right-start", "right-end"], "description": "default: bottom"},
+  "el-dialog/size": {"options": ["tiny", "small", "large", "full"], "description": "size of dialog, default: small"},
   "el-tooltip/content": {"description": "display content, can be overridden by slot#content"},
   "el-popover/content": {"description": "popover content, can be replaced with a default slot"},
   "el-dropdown/trigger": {"options": ["hover", "click"], "description": "default: hover"},
