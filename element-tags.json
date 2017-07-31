@@ -56,7 +56,7 @@
     "defaults": ["v-model", "placeholder"]
   },
   "el-select": {
-    "attributes": ["multiple", "disabled", "size", "clearable", "multiple-limit", "name", "placeholder", "filterable", "allow-create", "filter-method", "remote", "remote-method", "loading", "loading-text", "no-match-text", "no-data-text", "popper-class", "default-first-option", "change", "visible-change", "remote-tag"],
+    "attributes": ["multiple", "disabled", "value-key", "size", "clearable", "multiple-limit", "name", "placeholder", "filterable", "allow-create", "filter-method", "remote", "remote-method", "loading", "loading-text", "no-match-text", "no-data-text", "popper-class", "default-first-option", "change", "visible-change", "remote-tag"],
     "defaults": ["v-model", "placeholder"],
     "subtags": ["el-option"],
     "description": "When there are plenty of options, use a drop-down menu to display and select desired ones."
@@ -109,7 +109,7 @@
     "description": "Used for rating"
   },
   "el-color-picker": {
-    "attributes": ["show-alpha", "color-format", "change"],
+    "attributes": ["show-alpha", "color-format", "change", "active-change"],
     "defaults": ["v-model"]
   },
   "el-transfer": {
@@ -167,8 +167,8 @@
     "description": "Displays important alert messages."
   },
   "el-menu": {
-    "attributes": ["mode", "theme", "default-active", "default-openeds", "unique-opened", "menu-trigger", "router", "open", "close"],
-    "defaults": ["default-active", ""],
+    "attributes": ["mode", "collapse", "theme", "default-active", "default-openeds", "unique-opened", "menu-trigger", "router", "select", "open", "close"],
+    "defaults": ["default-active"],
     "subtags": ["el-submenu", "el-menu-item"]
   },
   "el-submenu": {
@@ -230,7 +230,7 @@
     "description": "Display prompt information for mouse hover."
   },
   "el-popover": {
-    "attributes": ["trigger", "title", "content", "width", "placement", "disabled", "value", "offset", "transition", "visible-arrow", "popper-options", "popper-class", "show", "hide"],
+    "attributes": ["trigger", "title", "content", "width", "placement", "disabled", "value", "offset", "transition", "visible-arrow", "popper-options", "popper-class", "show", "hide", "open-delay"],
     "defaults": ["placement"]
   },
   "el-card": {
