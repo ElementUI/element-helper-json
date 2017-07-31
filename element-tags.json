@@ -43,12 +43,12 @@
     "defaults": ["label"]
   },
   "el-input": {
-    "attributes": ["value", "placeholder", "disabled", "custom-item", "icon", "fetch-suggestions", "popper-class", "trigger-on-focus", "on-icon-click", "click", "blur", "focus", "change"],
+    "attributes": ["type", "value", "maxlength", "minlength", "placeholder", "disabled", "size", "icon", "rows", "autosize", "auto-complete", "name", "readonly", "max", "min", "step", "resize", "autofocus", "form", "on-icon-click", "select"],
     "defaults": ["v-model", "placeholder"],
     "description": "Input data using mouse or keyboard."
   },
   "el-autocomplete": {
-    "attributes": ["type", "value", "maxlength", "minlength", "placeholder", "disabled", "size", "icon", "rows", "autosize", "auto-complete", "name", "readonly", "max", "min", "step", "resize", "autofocus", "form", "on-icon-click", "select"],
+    "attributes": ["value", "placeholder", "disabled", "custom-item", "icon", "fetch-suggestions", "popper-class", "trigger-on-focus", "on-icon-click", "click", "blur", "focus", "change"],
     "defaults": ["v-model", "placeholder"]
   },
   "el-input-number": {
