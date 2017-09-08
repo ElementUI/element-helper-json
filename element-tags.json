@@ -81,7 +81,7 @@
     "description": "Switch is used for switching between two opposing states."
   },
   "el-slider": {
-    "attributes": ["min", "max", "disabled", "step", "show-input", "show-input-controls", "show-stops", "show-tooltip", "format-tooltip", "range", "vertical", "height", "change"],
+    "attributes": ["min", "max", "disabled", "step", "show-input", "show-input-controls", "show-stops", "show-tooltip", "format-tooltip", "range", "vertical", "height", "debounce", "change"],
     "defaults": ["v-model"],
     "description": "Drag the slider within a fixed range."
   },
@@ -90,7 +90,7 @@
     "defaults": ["v-model", "placeholder"]
   },
   "el-time-picker": {
-    "attributes": ["readonly", "editable", "disabled", "clearable", "size", "placeholder", "value", "align", "popper-class", "is-range", "vertical", "height", "change"],
+    "attributes": ["readonly", "format", "editable", "disabled", "clearable", "size", "placeholder", "value", "align", "popper-class", "is-range", "vertical", "height", "change"],
     "defaults": ["v-model", "placeholder"]
   },
   "el-date-picker": {
@@ -118,7 +118,7 @@
   },
   "el-form": {
     "attributes": ["model", "rules", "inline", "label-position", "label-width", "label-suffix", "show-message"],
-    "defaults": ["model"],
+    "defaults": [":model"],
     "subtags": ["el-form-item"],
     "description": "Form consists of `input`, `radio`, `select`, `checkbox` and so on. With form, you can collect, verify and submit data."
   },
@@ -226,7 +226,7 @@
   },
   "el-tooltip": {
     "attributes": ["effect", "content", "placement", "value", "disabled", "offset", "transition", "visible-arrow", "popper-options", "open-delay", "manual", "popper-class", "enterable"],
-    "defaults": ["placement"],
+    "defaults": ["content", "placement"],
     "description": "Display prompt information for mouse hover."
   },
   "el-popover": {
