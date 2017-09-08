@@ -181,6 +181,7 @@
   "el-input-number/min": {"description": "the minimum allowed value"},
   "el-slider/min": {"description": "minimum value, defalult: 0"},
   "el-slider/max": {"description": "maximum value, defalult: 100"},
+  "el-slider/debounce": {"description": "debounce delay when typing, in millisecond, works when 'show-input' is true, default: 300"},
   "el-rate/max": {"description": "max rating score, default: 5"},
   "el-badge/max": {"description": "maximum value, shows '{max}+' when exceeded. Only works if 'value' is a Number"},
   "el-checkbox-group/max": {"description": "maximum number of checkbox checked"},
