@@ -10,12 +10,12 @@
     "description": "A column in grid system"
   },
   "el-button": {
-    "attributes": ["type", "size", "plain", "loading", "disabled", "icon", "autofocus", "native-type"],
+    "attributes": ["type", "size", "plain", "loading", "disabled", "icon", "autofocus", "native-type", "round"],
     "defaults": ["type"],
     "description": "Commonly used button."
   },
   "el-radio": {
-    "attributes": ["label", "disabled", "name"],
+    "attributes": ["label", "disabled", "border", "size", "name"],
     "defaults": ["label"],
     "description": "Single selection among multiple options."
   },
@@ -29,7 +29,7 @@
     "defaults": ["label"]
   },
   "el-checkbox": {
-    "attributes": ["label", "true-label", "false-label", "name", "checked", "indeterminate", "disabled"],
+    "attributes": ["label", "true-label", "false-label", "border", "size", "name", "checked", "indeterminate", "disabled"],
     "defaults": ["label"],
     "description": "A group of options for multiple choices."
   },
@@ -43,12 +43,12 @@
     "defaults": ["label"]
   },
   "el-input": {
-    "attributes": ["type", "value", "maxlength", "minlength", "placeholder", "disabled", "size", "icon", "rows", "autosize", "auto-complete", "name", "readonly", "max", "min", "step", "resize", "autofocus", "form", "on-icon-click", "select"],
+    "attributes": ["type", "value", "maxlength", "minlength", "placeholder", "disabled", "size", "prefix-icon", "suffix-icon", "rows", "autosize", "auto-complete", "name", "readonly", "max", "min", "step", "resize", "autofocus", "form", "on-icon-click", "click", "blur", "focus", "change"],
     "defaults": ["v-model", "placeholder"],
     "description": "Input data using mouse or keyboard."
   },
   "el-autocomplete": {
-    "attributes": ["value", "placeholder", "disabled", "custom-item", "icon", "fetch-suggestions", "popper-class", "trigger-on-focus", "on-icon-click", "click", "blur", "focus", "change"],
+    "attributes": ["value", "debounce", "placeholder", "disabled", "custom-item", "icon", "fetch-suggestions", "popper-class", "trigger-on-focus", "on-icon-click", "select-when-unmatched", "select"],
     "defaults": ["v-model", "placeholder"]
   },
   "el-input-number": {
@@ -90,44 +90,44 @@
     "defaults": ["v-model", "placeholder"]
   },
   "el-time-picker": {
-    "attributes": ["readonly", "format", "editable", "disabled", "clearable", "size", "placeholder", "value", "align", "popper-class", "is-range", "vertical", "height", "change"],
+    "attributes": ["readonly", "editable", "disabled", "clearable", "size", "placeholder", "start-placeholde", "end-placeholde", "value", "align", "picker-options", "range-separator", "popper-class", "is-range", "arrow-control", "value-format", "default-value", "change", "blur", "focus"],
     "defaults": ["v-model", "placeholder"]
   },
   "el-date-picker": {
-    "attributes": ["readonly", "editable", "disabled", "clearable", "size", "placeholder", "type", "format", "align", "popper-class", "picker-options", "range-separator", "default-value", "change"],
+    "attributes": ["readonly", "editable", "disabled", "clearable", "size", "placeholder", "start-placeholde", "end-placeholde", "time-arrow-control", "type", "format", "align", "popper-class", "picker-options", "range-separator", "default-value", "value-format", "change"],
     "defaults": ["v-model", "placeholder"]
   },
   "el-upload": {
-    "attributes": ["action", "headers", "multiple", "data", "name", "width", "name", "with-credentials", "show-file-list", "drag", "accept", "on-preview", "on-remove", "on-success", "on-error", "on-progress", "on-change", "before-upload", "list-type", "auto-upload", "file-list", "http-request", "disabled"],
+    "attributes": ["action", "headers", "multiple", "data", "name", "width", "name", "with-credentials", "show-file-list", "drag", "accept", "on-preview", "on-remove", "on-success", "on-error", "on-progress", "on-change", "before-upload", "list-type", "auto-upload", "file-list", "http-request", "disabled", "limit", "on-exceed"],
     "defaults": ["action"],
     "subtags": ["el-button"],
     "description": "Upload files by clicking or drag-and-drop"
   },
   "el-rate": {
-    "attributes": ["max", "disabled", "allow-half", "low-threshold", "high-threshold", "colors", "void-color", "disabled-void-color", "icon-classes", "void-icon-class", "disabled-void-icon-class", "show-text", "text-color", "texts", "text-template", "change"],
+    "attributes": ["max", "disabled", "allow-half", "low-threshold", "high-threshold", "colors", "void-color", "disabled-void-color", "icon-classes", "void-icon-class", "disabled-void-icon-class", "show-text", "show-score", "text-color", "texts", "score-template", "change"],
     "defaults": ["v-model"],
     "description": "Used for rating"
   },
   "el-color-picker": {
-    "attributes": ["show-alpha", "color-format", "change", "active-change"],
+    "attributes": ["disabled", "size", "show-alpha", "color-format", "popper-class", "change", "active-change"],
     "defaults": ["v-model"]
   },
   "el-transfer": {
-    "attributes": ["data", "filterable", "filter-placeholder", "filter-method", "titles", "button-texts", "render-content", "footer-format", "props", "left-default-checked", "right-default-checked", "change"],
+    "attributes": ["data", "filterable", "filter-placeholder", "filter-method", "titles", "button-texts", "render-content", "format", "props", "left-default-checked", "right-default-checked", "change"],
     "defaults": ["v-model", ":data"]
   },
   "el-form": {
-    "attributes": ["model", "rules", "inline", "label-position", "label-width", "label-suffix", "show-message"],
+    "attributes": ["model", "rules", "inline", "label-position", "label-width", "label-suffix", "show-message", "inline-message", "status-icon", "size"],
     "defaults": [":model"],
     "subtags": ["el-form-item"],
     "description": "Form consists of `input`, `radio`, `select`, `checkbox` and so on. With form, you can collect, verify and submit data."
   },
   "el-form-item": {
-    "attributes": ["label", "prop", "label-width", "required", "rules", "error", "show-message"],
+    "attributes": ["label", "prop", "label-width", "required", "rules", "error", "show-message", "inline-message", "size"],
     "defaults": ["label"]
   },
   "el-table": {
-    "attributes": ["data", "height", "max-height", "stripe", "border", "fit", "show-header", "highlight-current-row", "current-row-key", "row-class-name", "row-style", "row-key", "empty-text", "default-expand-all", "expand-row-keys", "default-sort", "tooltip-effect", "show-summary", "sum-text", "summary-method", "select", "select-all", "selection-change", "cell-mouse-enter", "cell-mouse-leave", "cell-click", "cell-click", "cell-dbclick", "row-click", "row-contextmenu", "row-dbclick", "header-click", "sort-change", "filter-change", "current-change", "header-draggend", "expand"],
+    "attributes": ["data", "height", "max-height", "stripe", "border", "fit", "show-header", "highlight-current-row", "current-row-key", "row-class-name", "row-style", "row-key", "empty-text", "default-expand-all", "expand-row-keys", "default-sort", "tooltip-effect", "show-summary", "sum-text", "summary-method", "select", "select-all", "selection-change", "cell-mouse-enter", "cell-mouse-leave", "cell-click", "cell-dbclick", "row-click", "row-contextmenu", "row-dbclick", "header-click", "sort-change", "filter-change", "current-change", "header-draggend", "expand"],
     "defaults": [":data"],
     "subtags": ["el-table-column"],
     "description": "Display multiple data with similar format. You can sort, filter, compare your data in a table."
@@ -137,7 +137,7 @@
     "defaults": ["label"]
   },
   "el-tag": {
-    "attributes": ["type", "closable", "close-transition", "hit", "color", "close"],
+    "attributes": ["type", "closable", "close-transition", "hit", "color", "size", "close"],
     "defaults": ["type"],
     "description": "Used for marking and selection."
   },
@@ -147,7 +147,7 @@
     "description": "Progress is used to show the progress of current operation, and inform the user the current status."
   },
   "el-tree": {
-    "attributes": ["data", "empty-text", "node-key", "props", "load", "render-content", "highlight-current", "current-node-key", "default-expand-all", "expand-on-click-node", "auto-expand-parent", "default-expanded-keys", "show-checkbox", "check-strictly", "default-checked-keys", "filter-node-method", "accordion", "indent", "node-click", "check-change", "current-change", "node-expand", "node-collapse"],
+    "attributes": ["data", "empty-text", "node-key", "props", "load", "render-content", "highlight-current", "current-node-key", "default-expand-all", "expand-on-click-node", "auto-expand-parent", "default-expanded-keys", "show-checkbox", "check-strictly", "default-checked-keys", "filter-node-method", "accordion", "indent", "check-descendants", "node-click", "check-change", "current-change", "node-expand", "node-collapse"],
     "defaults": [":data"],
     "description": "Display a set of data with hierarchies."
   },
@@ -162,12 +162,12 @@
     "description": "A number or status mark on buttons and icons."
   },
   "el-alert": {
-    "attributes": ["title", "type", "description", "closable", "close-text", "show-icon", "close"],
+    "attributes": ["title", "type", "description", "closable", "center", "close-text", "show-icon", "close"],
     "defaults": ["type", "title"],
     "description": "Displays important alert messages."
   },
   "el-menu": {
-    "attributes": ["mode", "collapse", "theme", "default-active", "default-openeds", "unique-opened", "menu-trigger", "router", "select", "open", "close"],
+    "attributes": ["mode", "collapse", "background-color", "text-color", "active-text-color", "theme", "default-active", "default-openeds", "unique-opened", "menu-trigger", "router", "select", "open", "close"],
     "defaults": ["default-active"],
     "subtags": ["el-submenu", "el-menu-item"]
   },
@@ -185,7 +185,7 @@
     "defaults": ["index"]
   },
   "el-tabs": {
-    "attributes": ["type", "closable", "addable", "editable", "value", "activate-name", "tab-click", "tab-remove", "tab-add", "edit"],
+    "attributes": ["type", "closable", "addable", "editable", "value", "activate-name", "tab-position", "tab-click", "tab-remove", "tab-add", "edit"],
     "subtags": ["el-tab-pane"],
     "description": "Divide data collections which are related yet belong to different types."
   },
@@ -193,7 +193,7 @@
     "attributes": ["label", "disabled", "name", "closable"]
   },
   "el-breadcrumb": {
-    "attributes": ["separator"],
+    "attributes": ["separator", "separator-class"],
     "defaults": ["separator"],
     "subtags": ["el-breadcrumb-item"],
     "description": "Displays the location of the current page, making it easier to browser back."
@@ -202,7 +202,7 @@
     "attributes": ["to", "replace"]
   },
   "el-dropdown": {
-    "attributes": ["type", "szie", "split-button", "menu-align", "trigger", "hide-on-click", "click", "command", "visible-change"],
+    "attributes": ["type", "szie", "split-button", "placement", "trigger", "hide-on-click", "click", "command", "visible-change"],
     "subtags": ["el-dropdown-menu"],
     "description": "Toggleable menu for displaying lists of links and actions."
   },
@@ -210,7 +210,7 @@
     "attributes": ["command", "disabled", "divided"]
   },
   "el-steps": {
-    "attributes": ["space", "direction", "active", "process-status", "align-center", "center"],
+    "attributes": ["space", "direction", "active", "process-status", "finish-status", "align-center", "simple"],
     "defaults": [":space", ":active"],
     "subtags": ["el-step"],
     "description": "Guide the user to complete tasks in accordance with the process. Its steps can be set according to the actual application scenario and the number of the steps can't be less than 2."
@@ -220,12 +220,12 @@
     "defaults": ["title"]
   },
   "el-dialog": {
-    "attributes": ["title", "top", "visible", "size", "modal", "modal-append-to-body", "lock-scroll", "custom-class", "close-on-click-modal", "show-close", "before-close", "close", "open"],
+    "attributes": ["title", "top", "visible", "width", "fullscreen", "modal", "modal-append-to-body", "append-to-body", "lock-scroll", "custom-class", "close-on-click-modal", "show-close", "before-close", "center", "close", "open"],
     "defaults": ["title"],
     "description": "Informs users while preserving the current page state."
   },
   "el-tooltip": {
-    "attributes": ["effect", "content", "placement", "value", "disabled", "offset", "transition", "visible-arrow", "popper-options", "open-delay", "manual", "popper-class", "enterable"],
+    "attributes": ["effect", "content", "placement", "value", "disabled", "offset", "transition", "visible-arrow", "popper-options", "open-delay", "manual", "popper-class", "enterable", "hide-after"],
     "defaults": ["content", "placement"],
     "description": "Display prompt information for mouse hover."
   },
