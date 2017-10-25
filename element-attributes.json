@@ -81,7 +81,7 @@
   "tooltip-effect": {"options": ["dark", "light"], "description": "tooltip 'effect' property"},
   "sum-text": {"description": "displayed text for the first column of summary row, default: Sum"},
   "summary-method": {"description": "custom summary method"},
-  "span-mehod": {"description": "method that returns rowspan and colspan"},
+  "span-method": {"description": "method that returns rowspan and colspan"},
   "column-key": {"description": "column's key. If you need to use the filter-change event, you need this attribute to identify which column is being filtered"},
   "fixed": {"options": ["ture", "left", "right"], "description": "whether column is fixed at left/right. Will be fixed at left if 'true'"},
   "render-header": {"description": "render function for table header of this column"},
