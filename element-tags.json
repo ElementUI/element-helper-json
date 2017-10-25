@@ -5,7 +5,7 @@
     "description": "A row in grid system"
   },
   "el-col": {
-    "attributes": ["span", "offset", "push", "xs", "sm", "md", "lg", "tag"],
+    "attributes": ["span", "offset", "push", "pull", "xs", "sm", "md", "lg", "xl", "tag"],
     "defaults": [":span"],
     "description": "A column in grid system"
   },
@@ -56,7 +56,7 @@
     "defaults": ["v-model", "placeholder"]
   },
   "el-select": {
-    "attributes": ["multiple", "disabled", "value-key", "size", "clearable", "multiple-limit", "name", "placeholder", "filterable", "allow-create", "filter-method", "remote", "remote-method", "loading", "loading-text", "no-match-text", "no-data-text", "popper-class", "default-first-option", "change", "visible-change", "remote-tag"],
+    "attributes": ["multiple", "disabled", "value-key", "size", "clearable", "multiple-limit", "name", "placeholder", "filterable", "allow-create", "filter-method", "remote", "remote-method", "loading", "loading-text", "no-match-text", "no-data-text", "popper-class", "reserve-keyword", "default-first-option", "change", "visible-change", "remote-tag"],
     "defaults": ["v-model", "placeholder"],
     "subtags": ["el-option"],
     "description": "When there are plenty of options, use a drop-down menu to display and select desired ones."
@@ -94,7 +94,7 @@
     "defaults": ["v-model", "placeholder"]
   },
   "el-date-picker": {
-    "attributes": ["readonly", "editable", "disabled", "clearable", "size", "placeholder", "start-placeholde", "end-placeholde", "time-arrow-control", "type", "format", "align", "popper-class", "picker-options", "range-separator", "default-value", "value-format", "change"],
+    "attributes": ["readonly", "editable", "disabled", "clearable", "size", "placeholder", "start-placeholde", "end-placeholde", "time-arrow-control", "type", "format", "align", "popper-class", "picker-options", "range-separator", "default-value", "value-format", "name", "unlink-panels", "change"],
     "defaults": ["v-model", "placeholder"]
   },
   "el-upload": {
@@ -127,7 +127,7 @@
     "defaults": ["label"]
   },
   "el-table": {
-    "attributes": ["data", "height", "max-height", "stripe", "border", "fit", "show-header", "highlight-current-row", "current-row-key", "row-class-name", "row-style", "row-key", "empty-text", "default-expand-all", "expand-row-keys", "default-sort", "tooltip-effect", "show-summary", "sum-text", "summary-method", "select", "select-all", "selection-change", "cell-mouse-enter", "cell-mouse-leave", "cell-click", "cell-dbclick", "row-click", "row-contextmenu", "row-dbclick", "header-click", "sort-change", "filter-change", "current-change", "header-draggend", "expand"],
+    "attributes": ["data", "height", "max-height", "stripe", "border", "fit", "show-header", "highlight-current-row", "current-row-key", "row-class-name", "row-style", "row-key", "empty-text", "default-expand-all", "expand-row-keys", "default-sort", "tooltip-effect", "show-summary", "sum-text", "summary-method", "span-method", "select", "select-all", "selection-change", "cell-mouse-enter", "cell-mouse-leave", "cell-click", "cell-dbclick", "row-click", "row-contextmenu", "row-dbclick", "header-click", "sort-change", "filter-change", "current-change", "header-draggend", "expand"],
     "defaults": [":data"],
     "subtags": ["el-table-column"],
     "description": "Display multiple data with similar format. You can sort, filter, compare your data in a table."
@@ -202,7 +202,7 @@
     "attributes": ["to", "replace"]
   },
   "el-dropdown": {
-    "attributes": ["type", "szie", "split-button", "placement", "trigger", "hide-on-click", "click", "command", "visible-change"],
+    "attributes": ["type", "szie", "split-button", "placement", "trigger", "hide-on-click", "show-timeout", "hide-timeout", "click", "command", "visible-change"],
     "subtags": ["el-dropdown-menu"],
     "description": "Toggleable menu for displaying lists of links and actions."
   },
