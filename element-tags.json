@@ -76,7 +76,7 @@
     "description": "If the options have a clear hierarchical structure, Cascader can be used to view and select them."
   },
   "el-switch": {
-    "attributes": ["disabled", "width", "on-icon-class", "off-icon-class", "on-text", "off-text", "on-value", "off-value", "on-color", "off-color", "name", "change"],
+    "attributes": ["disabled", "width", "active-icon-class", "inactive-icon-class", "active-text", "inactive-text", "active-value", "inactive-value", "active-color", "inactive-color", "on-icon-class", "off-icon-class", "on-text", "off-text", "on-value", "off-value", "on-color", "off-color", "name", "change"],
     "defaults": ["v-model"],
     "description": "Switch is used for switching between two opposing states."
   },
