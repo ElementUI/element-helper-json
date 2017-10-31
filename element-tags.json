@@ -43,12 +43,12 @@
     "defaults": ["label"]
   },
   "el-input": {
-    "attributes": ["type", "value", "maxlength", "minlength", "placeholder", "disabled", "size", "prefix-icon", "suffix-icon", "rows", "autosize", "auto-complete", "name", "readonly", "max", "min", "step", "resize", "autofocus", "form", "on-icon-click", "click", "blur", "focus", "change"],
+    "attributes": ["type", "value", "maxlength", "minlength", "placeholder", "disabled", "size", "icon", "prefix-icon", "suffix-icon", "rows", "autosize", "auto-complete", "name", "readonly", "max", "min", "step", "resize", "autofocus", "form", "on-icon-click", "click", "blur", "focus", "change"],
     "defaults": ["v-model", "placeholder"],
     "description": "Input data using mouse or keyboard."
   },
   "el-autocomplete": {
-    "attributes": ["value", "debounce", "placeholder", "disabled", "custom-item", "icon", "fetch-suggestions", "popper-class", "trigger-on-focus", "on-icon-click", "select-when-unmatched", "select"],
+    "attributes": ["value", "debounce", "placeholder", "disabled", "props", "custom-item", "icon", "fetch-suggestions", "popper-class", "trigger-on-focus", "on-icon-click", "select-when-unmatched", "select"],
     "defaults": ["v-model", "placeholder"]
   },
   "el-input-number": {
@@ -127,7 +127,7 @@
     "defaults": ["label"]
   },
   "el-table": {
-    "attributes": ["data", "height", "max-height", "stripe", "border", "fit", "show-header", "highlight-current-row", "current-row-key", "row-class-name", "cell-class-name", "cell-style", "header-row-class-name", "header-row-style", "header-cell-name", "header-cell-style", "row-style", "row-key", "empty-text", "default-expand-all", "expand-row-keys", "default-sort", "tooltip-effect", "show-summary", "sum-text", "summary-method", "span-method", "select", "select-all", "selection-change", "cell-mouse-enter", "cell-mouse-leave", "cell-click", "cell-dbclick", "row-click", "row-contextmenu", "row-dbclick", "header-click", "sort-change", "filter-change", "current-change", "header-draggend", "expand"],
+    "attributes": ["data", "height", "max-height", "stripe", "border", "fit", "show-header", "highlight-current-row", "current-row-key", "row-class-name", "cell-class-name", "cell-style", "header-row-class-name", "header-row-style", "header-cell-name", "header-cell-style", "row-style", "row-key", "empty-text", "default-expand-all", "expand-row-keys", "default-sort", "tooltip-effect", "show-summary", "sum-text", "summary-method", "span-method", "select", "select-all", "selection-change", "cell-mouse-enter", "cell-mouse-leave", "cell-click", "cell-dbclick", "row-click", "row-contextmenu", "row-dbclick", "header-click", "sort-change", "filter-change", "current-change", "header-draggend", "expand", "expand-change"],
     "defaults": [":data"],
     "subtags": ["el-table-column"],
     "description": "Display multiple data with similar format. You can sort, filter, compare your data in a table."
@@ -210,7 +210,7 @@
     "attributes": ["command", "disabled", "divided"]
   },
   "el-steps": {
-    "attributes": ["space", "direction", "active", "process-status", "finish-status", "align-center", "simple"],
+    "attributes": ["space", "direction", "active", "process-status", "finish-status", "align-center", "center", "simple"],
     "defaults": [":space", ":active"],
     "subtags": ["el-step"],
     "description": "Guide the user to complete tasks in accordance with the process. Its steps can be set according to the actual application scenario and the number of the steps can't be less than 2."
