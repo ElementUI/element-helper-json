@@ -43,12 +43,12 @@
     "defaults": ["label"]
   },
   "el-input": {
-    "attributes": ["type", "value", "maxlength", "minlength", "placeholder", "disabled", "size", "icon", "prefix-icon", "suffix-icon", "rows", "autosize", "auto-complete", "name", "readonly", "max", "min", "step", "resize", "autofocus", "form", "on-icon-click", "click", "blur", "focus", "change"],
+    "attributes": ["type", "value", "maxlength", "minlength", "placeholder", "disabled", "size", "icon", "prefix-icon", "suffix-icon", "rows", "autosize", "auto-complete", "name", "readonly", "max", "min", "step", "resize", "autofocus", "form", "label", "clearable", "on-icon-click", "click", "blur", "focus", "change"],
     "defaults": ["v-model", "placeholder"],
     "description": "Input data using mouse or keyboard."
   },
   "el-autocomplete": {
-    "attributes": ["value", "debounce", "placeholder", "disabled", "props", "custom-item", "icon", "fetch-suggestions", "popper-class", "trigger-on-focus", "on-icon-click", "select-when-unmatched", "select"],
+    "attributes": ["value", "debounce", "placeholder", "disabled", "props", "custom-item", "icon", "fetch-suggestions", "popper-class", "trigger-on-focus", "on-icon-click", "select-when-unmatched", "label", "prefix-icon", "suffix-icon", "select"],
     "defaults": ["v-model", "placeholder"]
   },
   "el-input-number": {
@@ -56,7 +56,7 @@
     "defaults": ["v-model", "placeholder"]
   },
   "el-select": {
-    "attributes": ["multiple", "disabled", "value-key", "size", "clearable", "multiple-limit", "name", "placeholder", "filterable", "allow-create", "filter-method", "remote", "remote-method", "loading", "loading-text", "no-match-text", "no-data-text", "popper-class", "reserve-keyword", "default-first-option", "change", "visible-change", "remote-tag"],
+    "attributes": ["multiple", "disabled", "value-key", "size", "clearable", "collapse-tags", "multiple-limit", "name", "placeholder", "filterable", "allow-create", "filter-method", "remote", "remote-method", "loading", "loading-text", "no-match-text", "no-data-text", "popper-class", "reserve-keyword", "default-first-option", "change", "visible-change", "remote-tag"],
     "defaults": ["v-model", "placeholder"],
     "subtags": ["el-option"],
     "description": "When there are plenty of options, use a drop-down menu to display and select desired ones."
@@ -71,7 +71,7 @@
     "defaults": ["v-for", ":key"]
   },
   "el-cascader": {
-    "attributes": ["options", "props", "value", "popper-class", "placeholder", "disabled", "clearable", "expand-trigger", "show-all-levels", "filterable", "debounce", "change-on-select", "size", "change", "active-item-change"],
+    "attributes": ["options", "props", "value", "separator", "popper-class", "placeholder", "disabled", "clearable", "expand-trigger", "show-all-levels", "filterable", "debounce", "change-on-select", "size", "change", "active-item-change"],
     "defaults": [":options", "v-model"],
     "description": "If the options have a clear hierarchical structure, Cascader can be used to view and select them."
   },
@@ -133,7 +133,7 @@
     "description": "Display multiple data with similar format. You can sort, filter, compare your data in a table."
   },
   "el-table-column": {
-    "attributes": ["type", "column-key", "index", "label", "prop", "width", "min-width", "fixed", "render-header", "sortable", "sort-method", "resizable", "formatter", "show-overflow-tooltip", "align", "header-align", "class-name", "label-class-name", "selectable", "reserve-selection", "filters", "filter-placement", "filter-multiple", "filter-method", "filtered-value"],
+    "attributes": ["type", "column-key", "index", "label", "prop", "width", "min-width", "fixed", "render-header", "sortable", "sort-method", "sort-by", "resizable", "formatter", "show-overflow-tooltip", "align", "header-align", "class-name", "label-class-name", "selectable", "reserve-selection", "filters", "filter-placement", "filter-multiple", "filter-method", "filtered-value"],
     "defaults": ["label"]
   },
   "el-tag": {
@@ -152,8 +152,8 @@
     "description": "Display a set of data with hierarchies."
   },
   "el-pagination": {
-    "attributes": ["small", "page-size", "total", "page-count", "current-page", "layout", "page-sizes", "popper-class", "prev-text", "next-text", "size-change", "current-page"],
-    "defaults": [":total", "@current-page", "layout"],
+    "attributes": ["small", "background", "page-size", "total", "page-count", "current-page", "layout", "page-sizes", "popper-class", "prev-text", "next-text", "size-change", "current-page"],
+    "defaults": [":total", ":current-page", ":page-size", "@current-change", "layout"],
     "description": "If you have too much data to display in one page, use pagination."
   },
   "el-badge": {
