@@ -43,7 +43,7 @@
     "defaults": ["label"]
   },
   "el-input": {
-    "attributes": ["type", "value", "maxlength", "minlength", "placeholder", "disabled", "size", "icon", "prefix-icon", "suffix-icon", "rows", "autosize", "auto-complete", "name", "readonly", "max", "min", "step", "resize", "autofocus", "form", "label", "clearable", "on-icon-click", "click", "blur", "focus", "change"],
+    "attributes": ["type", "value", "maxlength", "minlength", "placeholder", "disabled", "size", "icon", "prefix-icon", "suffix-icon", "rows", "autosize", "auto-complete", "name", "readonly", "max", "min", "step", "resize", "autofocus", "form", "label", "tabindex", "clearable", "on-icon-click", "click", "blur", "focus", "change"],
     "defaults": ["v-model", "placeholder"],
     "description": "Input data using mouse or keyboard."
   },
@@ -52,7 +52,7 @@
     "defaults": ["v-model", "placeholder"]
   },
   "el-input-number": {
-    "attributes": ["value", "min", "max", "step", "size", "disabled", "controls", "debounce", "change"],
+    "attributes": ["value", "min", "max", "step", "size", "disabled", "controls-position", "controls", "debounce", "change"],
     "defaults": ["v-model", "placeholder"]
   },
   "el-select": {
@@ -98,7 +98,7 @@
     "defaults": ["v-model", "placeholder"]
   },
   "el-upload": {
-    "attributes": ["action", "headers", "multiple", "data", "name", "width", "name", "with-credentials", "show-file-list", "drag", "accept", "on-preview", "on-remove", "on-success", "on-error", "on-progress", "on-change", "before-upload", "list-type", "auto-upload", "file-list", "http-request", "disabled", "limit", "on-exceed"],
+    "attributes": ["action", "headers", "multiple", "data", "name", "width", "name", "with-credentials", "show-file-list", "drag", "accept", "on-preview", "on-remove", "on-success", "on-error", "on-progress", "on-change", "before-upload", "before-remove", "list-type", "auto-upload", "file-list", "http-request", "disabled", "limit", "on-exceed"],
     "defaults": ["action"],
     "subtags": ["el-button"],
     "description": "Upload files by clicking or drag-and-drop"
