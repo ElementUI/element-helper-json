@@ -56,7 +56,7 @@
     "defaults": ["v-model", "placeholder"]
   },
   "el-select": {
-    "attributes": ["multiple", "disabled", "value-key", "size", "clearable", "collapse-tags", "multiple-limit", "name", "placeholder", "filterable", "allow-create", "filter-method", "remote", "remote-method", "loading", "loading-text", "no-match-text", "no-data-text", "popper-class", "reserve-keyword", "default-first-option", "change", "visible-change", "remote-tag"],
+    "attributes": ["multiple", "disabled", "value-key", "size", "clearable", "collapse-tags", "multiple-limit", "name", "auto-complete", "placeholder", "filterable", "allow-create", "filter-method", "remote", "remote-method", "loading", "loading-text", "no-match-text", "no-data-text", "popper-class", "reserve-keyword", "default-first-option", "popper-append-to-body", "change", "visible-change", "remote-tag"],
     "defaults": ["v-model", "placeholder"],
     "subtags": ["el-option"],
     "description": "When there are plenty of options, use a drop-down menu to display and select desired ones."
@@ -71,7 +71,7 @@
     "defaults": ["v-for", ":key"]
   },
   "el-cascader": {
-    "attributes": ["options", "props", "value", "separator", "popper-class", "placeholder", "disabled", "clearable", "expand-trigger", "show-all-levels", "filterable", "debounce", "change-on-select", "size", "change", "active-item-change"],
+    "attributes": ["options", "props", "value", "separator", "popper-class", "placeholder", "disabled", "clearable", "expand-trigger", "show-all-levels", "filterable", "debounce", "change-on-select", "size", "change", "active-item-change", "blur", "focus"],
     "defaults": [":options", "v-model"],
     "description": "If the options have a clear hierarchical structure, Cascader can be used to view and select them."
   },
@@ -94,7 +94,7 @@
     "defaults": ["v-model", "placeholder"]
   },
   "el-date-picker": {
-    "attributes": ["readonly", "editable", "disabled", "clearable", "size", "placeholder", "start-placeholde", "end-placeholde", "time-arrow-control", "type", "format", "align", "popper-class", "picker-options", "range-separator", "default-value", "value-format", "name", "unlink-panels", "change"],
+    "attributes": ["readonly", "editable", "disabled", "clearable", "size", "placeholder", "start-placeholde", "end-placeholde", "time-arrow-control", "type", "format", "align", "popper-class", "picker-options", "range-separator", "default-value", "default-time", "value-format", "name", "unlink-panels", "prefix-icon", "clear-icon", "change"],
     "defaults": ["v-model", "placeholder"]
   },
   "el-upload": {
@@ -117,7 +117,7 @@
     "defaults": ["v-model", ":data"]
   },
   "el-form": {
-    "attributes": ["model", "rules", "inline", "label-position", "label-width", "label-suffix", "show-message", "inline-message", "status-icon", "size"],
+    "attributes": ["model", "rules", "inline", "label-position", "label-width", "label-suffix", "show-message", "inline-message", "status-icon", "validate-on-rule-change", "size", "disabled"],
     "defaults": [":model"],
     "subtags": ["el-form-item"],
     "description": "Form consists of `input`, `radio`, `select`, `checkbox` and so on. With form, you can collect, verify and submit data."
@@ -147,7 +147,7 @@
     "description": "Progress is used to show the progress of current operation, and inform the user the current status."
   },
   "el-tree": {
-    "attributes": ["data", "empty-text", "node-key", "props", "load", "render-content", "highlight-current", "current-node-key", "default-expand-all", "expand-on-click-node", "auto-expand-parent", "default-expanded-keys", "show-checkbox", "check-strictly", "default-checked-keys", "filter-node-method", "accordion", "indent", "check-descendants", "node-click", "check-change", "current-change", "node-expand", "node-collapse"],
+    "attributes": ["data", "empty-text", "node-key", "props", "load", "render-content", "highlight-current", "current-node-key", "default-expand-all", "expand-on-click-node", "auto-expand-parent", "default-expanded-keys", "show-checkbox", "check-strictly", "default-checked-keys", "filter-node-method", "accordion", "indent", "check-descendants", "node-click", "node-contextmenu", "check-change", "check", "current-change", "node-expand", "node-collapse"],
     "defaults": [":data"],
     "description": "Display a set of data with hierarchies."
   },
@@ -172,7 +172,7 @@
     "subtags": ["el-submenu", "el-menu-item"]
   },
   "el-submenu": {
-    "attribute": ["index"],
+    "attribute": ["index", "popper-class", "show-timeout", "hide-timeout", "disabled"],
     "defaults": ["index"],
     "subtags": ["el-menu-item"]
   },
@@ -181,7 +181,7 @@
     "subtags": ["el-menu-item"]
   },
   "el-menu-item": {
-    "attributes": ["index", "route"],
+    "attributes": ["index", "route", "disabled"],
     "defaults": ["index"]
   },
   "el-tabs": {
