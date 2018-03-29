@@ -10,7 +10,7 @@
     "description": "A column in grid system"
   },
   "el-button": {
-    "attributes": ["type", "size", "plain", "loading", "disabled", "icon", "autofocus", "native-type", "round"],
+    "attributes": ["type", "size", "plain", "loading", "disabled", "icon", "autofocus", "native-type", "round", "circle"],
     "defaults": ["type"],
     "description": "Commonly used button."
   },
@@ -43,7 +43,7 @@
     "defaults": ["label"]
   },
   "el-input": {
-    "attributes": ["type", "value", "maxlength", "minlength", "placeholder", "disabled", "size", "icon", "prefix-icon", "suffix-icon", "rows", "autosize", "auto-complete", "name", "readonly", "max", "min", "step", "resize", "autofocus", "form", "label", "tabindex", "clearable", "on-icon-click", "click", "blur", "focus", "change"],
+    "attributes": ["type", "value", "maxlength", "minlength", "placeholder", "disabled", "size", "icon", "prefix-icon", "suffix-icon", "rows", "autosize", "auto-complete", "name", "readonly", "max", "min", "step", "resize", "autofocus", "form", "label", "tabindex", "clearable", "on-icon-click", "click", "blur", "focus", "change", "clear"],
     "defaults": ["v-model", "placeholder"],
     "description": "Input data using mouse or keyboard."
   },
@@ -56,7 +56,7 @@
     "defaults": ["v-model", "placeholder"]
   },
   "el-select": {
-    "attributes": ["multiple", "disabled", "value-key", "size", "clearable", "collapse-tags", "multiple-limit", "name", "auto-complete", "placeholder", "filterable", "allow-create", "filter-method", "remote", "remote-method", "loading", "loading-text", "no-match-text", "no-data-text", "popper-class", "reserve-keyword", "default-first-option", "popper-append-to-body", "change", "visible-change", "remote-tag"],
+    "attributes": ["multiple", "disabled", "value-key", "size", "clearable", "collapse-tags", "multiple-limit", "name", "auto-complete", "placeholder", "filterable", "allow-create", "filter-method", "remote", "remote-method", "loading", "loading-text", "no-match-text", "no-data-text", "popper-class", "reserve-keyword", "default-first-option", "popper-append-to-body", "change", "visible-change", "remote-tag", "clear", "blur", "focus"],
     "defaults": ["v-model", "placeholder"],
     "subtags": ["el-option"],
     "description": "When there are plenty of options, use a drop-down menu to display and select desired ones."
@@ -81,7 +81,7 @@
     "description": "Switch is used for switching between two opposing states."
   },
   "el-slider": {
-    "attributes": ["min", "max", "disabled", "step", "show-input", "show-input-controls", "show-stops", "show-tooltip", "format-tooltip", "range", "vertical", "height", "debounce", "change"],
+    "attributes": ["min", "max", "disabled", "step", "show-input", "show-input-controls", "input-size", "show-stops", "show-tooltip", "format-tooltip", "range", "vertical", "height", "debounce", "tooltip-class", "change"],
     "defaults": ["v-model"],
     "description": "Drag the slider within a fixed range."
   },
@@ -109,15 +109,15 @@
     "description": "Used for rating"
   },
   "el-color-picker": {
-    "attributes": ["disabled", "size", "show-alpha", "color-format", "popper-class", "change", "active-change"],
+    "attributes": ["disabled", "size", "show-alpha", "color-format", "popper-class", "predefine", "change", "active-change"],
     "defaults": ["v-model"]
   },
   "el-transfer": {
-    "attributes": ["data", "filterable", "filter-placeholder", "filter-method", "titles", "button-texts", "render-content", "format", "props", "left-default-checked", "right-default-checked", "change"],
+    "attributes": ["data", "filterable", "filter-placeholder", "filter-method", "target-order", "titles", "button-texts", "render-content", "format", "props", "left-default-checked", "right-default-checked", "change", "left-check-change", "right-check-change"],
     "defaults": ["v-model", ":data"]
   },
   "el-form": {
-    "attributes": ["model", "rules", "inline", "label-position", "label-width", "label-suffix", "show-message", "inline-message", "status-icon", "validate-on-rule-change", "size", "disabled"],
+    "attributes": ["model", "rules", "inline", "label-position", "label-width", "label-suffix", "show-message", "inline-message", "status-icon", "validate-on-rule-change", "size", "disabled", "validate"],
     "defaults": [":model"],
     "subtags": ["el-form-item"],
     "description": "Form consists of `input`, `radio`, `select`, `checkbox` and so on. With form, you can collect, verify and submit data."
@@ -127,7 +127,7 @@
     "defaults": ["label"]
   },
   "el-table": {
-    "attributes": ["data", "height", "max-height", "stripe", "border", "fit", "show-header", "highlight-current-row", "current-row-key", "row-class-name", "cell-class-name", "cell-style", "header-row-class-name", "header-row-style", "header-cell-name", "header-cell-style", "row-style", "row-key", "empty-text", "default-expand-all", "expand-row-keys", "default-sort", "tooltip-effect", "show-summary", "sum-text", "summary-method", "span-method", "select", "select-all", "selection-change", "cell-mouse-enter", "cell-mouse-leave", "cell-click", "cell-dbclick", "row-click", "row-contextmenu", "row-dbclick", "header-click", "sort-change", "filter-change", "current-change", "header-draggend", "expand", "expand-change"],
+    "attributes": ["data", "height", "max-height", "stripe", "border", "fit", "show-header", "highlight-current-row", "current-row-key", "row-class-name", "cell-class-name", "cell-style", "header-row-class-name", "header-row-style", "header-cell-name", "header-cell-style", "row-style", "row-key", "empty-text", "default-expand-all", "expand-row-keys", "default-sort", "tooltip-effect", "show-summary", "sum-text", "summary-method", "span-method", "select-on-indeterminate", "select", "select-all", "selection-change", "cell-mouse-enter", "cell-mouse-leave", "cell-click", "cell-dbclick", "row-click", "row-contextmenu", "row-dbclick", "header-click", "sort-change", "filter-change", "current-change", "header-draggend", "expand", "expand-change"],
     "defaults": [":data"],
     "subtags": ["el-table-column"],
     "description": "Display multiple data with similar format. You can sort, filter, compare your data in a table."
@@ -142,17 +142,17 @@
     "description": "Used for marking and selection."
   },
   "el-progress": {
-    "attributes": ["percentage", "type", "stroke-width", "text-inside", "status", "width", "show-text"],
+    "attributes": ["percentage", "type", "stroke-width", "text-inside", "status", "color", "width", "show-text"],
     "defaults": ["percentage"],
     "description": "Progress is used to show the progress of current operation, and inform the user the current status."
   },
   "el-tree": {
-    "attributes": ["data", "empty-text", "node-key", "props", "load", "render-content", "highlight-current", "current-node-key", "default-expand-all", "expand-on-click-node", "auto-expand-parent", "default-expanded-keys", "show-checkbox", "check-strictly", "default-checked-keys", "filter-node-method", "accordion", "indent", "check-descendants", "node-click", "node-contextmenu", "check-change", "check", "current-change", "node-expand", "node-collapse"],
+    "attributes": ["data", "empty-text", "node-key", "props", "load", "render-content", "highlight-current", "current-node-key", "default-expand-all", "expand-on-click-node", "auto-expand-parent", "default-expanded-keys", "show-checkbox", "check-strictly", "default-checked-keys", "filter-node-method", "accordion", "indent", "check-descendants", "draggable", "allow-drag", "allow-drop", "node-click", "node-contextmenu", "check-change", "check", "current-change", "node-expand", "node-collapse", "node-drag-start", "node-drag-enter", "node-drag-leave", "node-drag-over", "node-drag-end", "node-drop"],
     "defaults": [":data"],
     "description": "Display a set of data with hierarchies."
   },
   "el-pagination": {
-    "attributes": ["small", "background", "page-size", "total", "page-count", "current-page", "layout", "page-sizes", "popper-class", "prev-text", "next-text", "size-change", "current-page"],
+    "attributes": ["small", "background", "page-size", "total", "page-count", "current-page", "layout", "page-sizes", "popper-class", "prev-text", "next-text", "disabled", "size-change", "current-page"],
     "defaults": [":total", ":current-page", ":page-size", "@current-change", "layout"],
     "description": "If you have too much data to display in one page, use pagination."
   },
@@ -167,7 +167,7 @@
     "description": "Displays important alert messages."
   },
   "el-menu": {
-    "attributes": ["mode", "collapse", "background-color", "text-color", "active-text-color", "theme", "default-active", "default-openeds", "unique-opened", "menu-trigger", "router", "select", "open", "close"],
+    "attributes": ["mode", "collapse", "background-color", "text-color", "active-text-color", "theme", "default-active", "default-openeds", "unique-opened", "menu-trigger", "router", "collapse-transition", "select", "open", "close"],
     "defaults": ["default-active"],
     "subtags": ["el-submenu", "el-menu-item"]
   },
@@ -230,7 +230,7 @@
     "description": "Display prompt information for mouse hover."
   },
   "el-popover": {
-    "attributes": ["trigger", "title", "content", "width", "placement", "disabled", "value", "offset", "transition", "visible-arrow", "popper-options", "popper-class", "show", "hide", "open-delay"],
+    "attributes": ["trigger", "title", "content", "width", "placement", "disabled", "value", "offset", "transition", "visible-arrow", "popper-options", "popper-class", "open-delay", "show", "hide", "after-enter", "after-leave"],
     "defaults": ["placement"]
   },
   "el-card": {
