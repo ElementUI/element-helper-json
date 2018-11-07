@@ -43,20 +43,20 @@
     "defaults": ["label"]
   },
   "el-input": {
-    "attributes": ["type", "value", "maxlength", "minlength", "placeholder", "disabled", "size", "icon", "prefix-icon", "suffix-icon", "rows", "autosize", "auto-complete", "name", "readonly", "max", "min", "step", "resize", "autofocus", "form", "label", "tabindex", "clearable", "on-icon-click", "click", "blur", "focus", "change", "clear"],
+    "attributes": ["type", "value", "maxlength", "minlength", "placeholder", "disabled", "size", "icon", "prefix-icon", "suffix-icon", "rows", "autosize", "autocomplete", "auto-complete", "name", "readonly", "max", "min", "step", "resize", "autofocus", "form", "label", "tabindex", "clearable", "on-icon-click", "click", "blur", "focus", "change", "clear"],
     "defaults": ["v-model", "placeholder"],
     "description": "Input data using mouse or keyboard."
   },
   "el-autocomplete": {
-    "attributes": ["value", "debounce", "placeholder", "disabled", "props", "custom-item", "icon", "fetch-suggestions", "popper-class", "trigger-on-focus", "on-icon-click", "select-when-unmatched", "label", "prefix-icon", "suffix-icon", "select"],
+    "attributes": ["value", "debounce", "placement", "placeholder", "disabled", "props", "custom-item", "icon", "fetch-suggestions", "popper-class", "trigger-on-focus", "on-icon-click", "select-when-unmatched", "label", "prefix-icon", "suffix-icon", "hide-loading", "popper-append-to-body", "select"],
     "defaults": ["v-model", "placeholder"]
   },
   "el-input-number": {
-    "attributes": ["value", "min", "max", "step", "size", "disabled", "controls-position", "controls", "debounce", "change"],
+    "attributes": ["value", "min", "max", "step", "precision", "size", "disabled", "controls-position", "controls", "debounce", "change"],
     "defaults": ["v-model", "placeholder"]
   },
   "el-select": {
-    "attributes": ["multiple", "disabled", "value-key", "size", "clearable", "collapse-tags", "multiple-limit", "name", "auto-complete", "placeholder", "filterable", "allow-create", "filter-method", "remote", "remote-method", "loading", "loading-text", "no-match-text", "no-data-text", "popper-class", "reserve-keyword", "default-first-option", "popper-append-to-body", "change", "visible-change", "remote-tag", "clear", "blur", "focus"],
+    "attributes": ["multiple", "disabled", "value-key", "size", "clearable", "collapse-tags", "multiple-limit", "name", "auto-complete", "placeholder", "filterable", "allow-create", "filter-method", "remote", "remote-method", "loading", "loading-text", "no-match-text", "no-data-text", "popper-class", "reserve-keyword", "default-first-option", "popper-append-to-body", "automatic-dropdown", "change", "visible-change", "remote-tag", "clear", "blur", "focus"],
     "defaults": ["v-model", "placeholder"],
     "subtags": ["el-option"],
     "description": "When there are plenty of options, use a drop-down menu to display and select desired ones."
@@ -152,7 +152,7 @@
     "description": "Display a set of data with hierarchies."
   },
   "el-pagination": {
-    "attributes": ["small", "background", "page-size", "total", "page-count", "current-page", "layout", "page-sizes", "popper-class", "prev-text", "next-text", "disabled", "size-change", "current-page"],
+    "attributes": ["small", "background", "page-size", "total", "page-count", "pager-count", "current-page", "layout", "page-sizes", "popper-class", "prev-text", "next-text", "disabled", "size-change", "current-page", "prev-click", "next-click"],
     "defaults": [":total", ":current-page", ":page-size", "@current-change", "layout"],
     "description": "If you have too much data to display in one page, use pagination."
   },
@@ -172,7 +172,7 @@
     "subtags": ["el-submenu", "el-menu-item"]
   },
   "el-submenu": {
-    "attribute": ["index", "popper-class", "show-timeout", "hide-timeout", "disabled"],
+    "attribute": ["index", "popper-class", "show-timeout", "hide-timeout", "disabled", "popper-append-to-body"],
     "defaults": ["index"],
     "subtags": ["el-menu-item"]
   },
@@ -185,12 +185,12 @@
     "defaults": ["index"]
   },
   "el-tabs": {
-    "attributes": ["type", "closable", "addable", "editable", "value", "activate-name", "tab-position", "tab-click", "tab-remove", "tab-add", "edit"],
+    "attributes": ["type", "closable", "addable", "editable", "value", "activate-name", "tab-position", "stretch", "before-leave", "tab-click", "tab-remove", "tab-add", "edit"],
     "subtags": ["el-tab-pane"],
     "description": "Divide data collections which are related yet belong to different types."
   },
   "el-tab-pane": {
-    "attributes": ["label", "disabled", "name", "closable"]
+    "attributes": ["label", "disabled", "name", "closable", "lazy"]
   },
   "el-breadcrumb": {
     "attributes": ["separator", "separator-class"],
@@ -220,7 +220,7 @@
     "defaults": ["title"]
   },
   "el-dialog": {
-    "attributes": ["title", "top", "visible", "width", "fullscreen", "modal", "modal-append-to-body", "append-to-body", "lock-scroll", "custom-class", "close-on-click-modal", "show-close", "before-close", "center", "close", "open"],
+    "attributes": ["title", "top", "visible", "width", "fullscreen", "modal", "modal-append-to-body", "append-to-body", "lock-scroll", "custom-class", "close-on-click-modal", "show-close", "before-close", "center", "close", "open", "opened", "closed"],
     "defaults": ["title"],
     "description": "Informs users while preserving the current page state."
   },
@@ -234,7 +234,7 @@
     "defaults": ["placement"]
   },
   "el-card": {
-    "attributes": ["header", "body-style"],
+    "attributes": ["header", "body-style", "shadow"],
     "description": "Integrate information in a card container."
   },
   "el-carousel": {
