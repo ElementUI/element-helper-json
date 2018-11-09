@@ -1,4 +1,21 @@
 {
+  "el-container": {
+    "attributes": ["direction"],
+    "description": "wrapper container. When nested with a <el-header> or <el-footer>, all its child elements will be vertically arranged. Otherwise horizontally"
+  },
+  "el-header": {
+    "attributes": ["height"],
+    "description": "container for headers"
+  },
+  "el-footer": {
+    "attributes": ["height"],
+    "description": "container for footers"
+  },
+  "el-aside": {
+    "attributes": ["width"],
+    "defaults": ["width"],
+    "description": "container for side sections (usually a side nav)"
+  },
   "el-row": {
     "attributes": ["gutter", "type", "justify", "align", "tag"],
     "subtags": ["el-col"],

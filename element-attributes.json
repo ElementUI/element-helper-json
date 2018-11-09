@@ -178,6 +178,7 @@
   "target-order": {"version": ">=2.2.1", "options": ["original", "push", "unshift"], "description": "order strategy for elements in the target list. If set to 'original', the elements will keep the same order as the data source. If set to 'push', the newly added elements will be pushed to the bottom. If set to 'unshift', the newly added elements will be inserted on the top, default: original"},
   "input-size": {"version": ">=2.2.1", "options": ["large", "medium", "small", "mini"], "description": "size of the input box, default: small"},
   "shadow": {"version": ">=2.3.3", "options": ["always", "hover", "never"], "description": "when to show card shadows, default: always"},
+  "el-container/direction": {"options": ["horizontal", "vertical"], "description": "vertical when nested with el-header or el-footer; horizontal otherwise"},
   "el-autocomplete/placement": {"version": ">=2.3.3", "options": ["top", "top-start", "top-end", "bottom", "bottom-start", "bottom-end"], "description": "placement of the popup menu, default: bottom-start"},
   "el-submenu/show-timeout": {"version": ">=2.0.11", "description": "timeout before showing a sub-menu, default: 300"},
   "el-submenu/hide-timeout": {"version": ">=2.0.11", "description": "timeout before hiding a sub-menu, default: 300"},
