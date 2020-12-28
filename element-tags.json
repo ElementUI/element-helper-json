@@ -172,7 +172,7 @@
     "subtags": ["el-submenu", "el-menu-item"]
   },
   "el-submenu": {
-    "attribute": ["index", "popper-class", "show-timeout", "hide-timeout", "disabled"],
+    "attributes": ["index", "popper-class", "show-timeout", "hide-timeout", "disabled"],
     "defaults": ["index"],
     "subtags": ["el-menu-item"]
   },
